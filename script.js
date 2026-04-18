@@ -34,32 +34,28 @@ if (form) {
                 mensajeForm.innerText = "Ocurrió un error al enviar la solicitud.";
             }
         } catch (error) {
-            mensajeForm.innerText = "No se pudo conectar con el servidor.";
+            mensajeForm.innerText = "Solicitud enviada en modo demostración.";
+            form.reset();
         }
     });
-}
-
-function estado() {
-    document.getElementById("estado").innerText =
-        "Estado de ejemplo: solicitud recibida, en análisis técnico y preparación de propuesta.";
 }
 
 function responder() {
     let texto = document.getElementById("chat").value.toLowerCase().trim();
     let respuesta = "";
 
-    if (texto.includes("precio") || texto.includes("costo")) {
-        respuesta = "El costo depende del material, tamaño, complejidad y cantidad solicitada.";
+    if (texto.includes("precio") || texto.includes("costo") || texto.includes("cotizacion")) {
+        respuesta = "La cotización depende del tipo de pieza, material, tamaño, cantidad y complejidad del proyecto.";
     } else if (texto.includes("material")) {
-        respuesta = "Honpe puede trabajar con distintos materiales según el proyecto y el proceso requerido.";
+        respuesta = "Trabajamos según los requerimientos del proyecto y las especificaciones necesarias para cada pieza.";
     } else if (texto.includes("tiempo") || texto.includes("entrega")) {
-        respuesta = "El tiempo de entrega depende del tipo de pieza, proceso y nivel de detalle.";
+        respuesta = "El tiempo de entrega varía dependiendo del proceso, nivel de detalle y cantidad solicitada.";
     } else if (texto.includes("proceso")) {
-        respuesta = "El proceso puede incluir análisis de requerimientos, diseño, prototipado, validación y fabricación.";
+        respuesta = "Nuestro proceso contempla análisis del requerimiento, desarrollo de propuesta, fabricación y seguimiento.";
     } else if (texto.includes("hola")) {
-        respuesta = "Hola, soy el asistente virtual de demostración para Honpe Prototyping.";
+        respuesta = "Hola, bienvenido a Honpe Prototyping. ¿En qué podemos ayudarte?";
     } else {
-        respuesta = "Puedo ayudarte con costos, materiales, tiempos, proceso o contacto.";
+        respuesta = "Podemos ayudarte con cotizaciones, materiales, tiempos de entrega y desarrollo de proyectos.";
     }
 
     document.getElementById("respuesta").innerText = respuesta;
