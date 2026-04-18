@@ -1,70 +1,68 @@
 const form = document.getElementById("cotizacionForm");
 const mensajeForm = document.getElementById("mensajeForm");
+const respuesta = document.getElementById("respuesta");
+const chatInput = document.getElementById("chat");
+const elementosFade = document.querySelectorAll(".fade");
 
 if (form) {
-    form.addEventListener("submit", async function(e) {
+    form.addEventListener("submit", function (e) {
         e.preventDefault();
 
-        const data = {
-            nombre: document.getElementById("nombre").value,
-            correo: document.getElementById("correo").value,
-            idea: document.getElementById("idea").value,
-            uso: document.getElementById("uso").value,
-            tamano: document.getElementById("tamano").value,
-            material: document.getElementById("material").value,
-            cantidad: document.getElementById("cantidad").value,
-            detalles: document.getElementById("detalles").value
-        };
+        const nombre = document.getElementById("nombre").value.trim();
+        const correo = document.getElementById("correo").value.trim();
+        const idea = document.getElementById("idea").value.trim();
+        const uso = document.getElementById("uso").value.trim();
 
-        try {
-            const respuesta = await fetch("http://localhost:3000/cotizacion", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify(data)
-            });
-
-            const resultado = await respuesta.json();
-
-            if (respuesta.ok) {
-                mensajeForm.innerText = resultado.mensaje;
-                form.reset();
-            } else {
-                mensajeForm.innerText = "Ocurrió un error al enviar la solicitud.";
-            }
-        } catch (error) {
-            mensajeForm.innerText = "Solicitud enviada en modo demostración.";
-            form.reset();
+        if (!nombre || !correo || !idea || !uso) {
+            mensajeForm.innerText = "Por favor completa los campos obligatorios.";
+            return;
         }
+
+        mensajeForm.innerText = "Solicitud enviada correctamente. Un asesor puede ayudarte a continuar con tu prototipo.";
+        form.reset();
     });
 }
 
-function responder() {
-    let texto = document.getElementById("chat").value.toLowerCase().trim();
-    let respuesta = "";
-
-    if (texto.includes("precio") || texto.includes("costo") || texto.includes("cotizacion")) {
-        respuesta = "La cotización depende del tipo de pieza, material, tamaño, cantidad y complejidad del proyecto.";
-    } else if (texto.includes("material")) {
-        respuesta = "Trabajamos según los requerimientos del proyecto y las especificaciones necesarias para cada pieza.";
-    } else if (texto.includes("tiempo") || texto.includes("entrega")) {
-        respuesta = "El tiempo de entrega varía dependiendo del proceso, nivel de detalle y cantidad solicitada.";
-    } else if (texto.includes("proceso")) {
-        respuesta = "Nuestro proceso contempla análisis del requerimiento, desarrollo de propuesta, fabricación y seguimiento.";
-    } else if (texto.includes("hola")) {
-        respuesta = "Hola, bienvenido a Honpe Prototyping. ¿En qué podemos ayudarte?";
-    } else {
-        respuesta = "Podemos ayudarte con cotizaciones, materiales, tiempos de entrega y desarrollo de proyectos.";
-    }
-
-    document.getElementById("respuesta").innerText = respuesta;
+function preguntaRapida(texto) {
+    chatInput.value = texto;
+    responder();
 }
 
-const elementosFade = document.querySelectorAll(".fade");
+function responder() {
+    const texto = chatInput.value.toLowerCase().trim();
+    let mensaje = "";
+
+    if (texto.includes("material")) {
+        mensaje = "No te preocupes si no sabes el material exacto. Podemos orientarte según el uso del producto, su resistencia y el resultado que buscas.";
+    } else if (texto.includes("cotizar") || texto.includes("cotización") || texto.includes("precio") || texto.includes("costo")) {
+        mensaje = "Para cotizar necesitamos entender qué quieres hacer, para qué lo necesitas, el tamaño aproximado, material estimado y cantidad.";
+    } else if (texto.includes("tiempo") || texto.includes("entrega")) {
+        mensaje = "El tiempo depende del tipo de pieza, complejidad, validación del diseño y proceso de fabricación.";
+    } else if (texto.includes("modelo") || texto.includes("3d") || texto.includes("ver cómo")) {
+        mensaje = "La visualización 3D ayuda a entender cómo se verá tu producto antes de fabricarlo y facilita tomar decisiones con más claridad.";
+    } else if (texto.includes("no sé") || texto.includes("confundido") || texto.includes("idea")) {
+        mensaje = "Está bien no tener todo definido. Puedes empezar explicando qué quieres crear, para qué servirá y si tienes alguna referencia visual.";
+    } else if (texto.includes("hola")) {
+        mensaje = "Hola. Soy tu asistente virtual. Puedo ayudarte a entender qué necesitas para comenzar tu prototipo.";
+    } else {
+        mensaje = "Puedo ayudarte con cotización, materiales, tiempos, visualización 3D y seguimiento del proyecto.";
+    }
+
+    respuesta.innerText = mensaje;
+}
+
+function estado() {
+    document.getElementById("estado").innerText =
+        "Actualización: ya se revisó la información inicial del proyecto y el siguiente paso estimado es la simulación conceptual del prototipo.";
+}
+
+function mostrarModelo() {
+    document.getElementById("modeloMensaje").innerText =
+        "Vista previa cargada: esta simulación permite validar forma general, escala estimada y siguientes ajustes del proyecto.";
+}
 
 function mostrarElementos() {
-    elementosFade.forEach(el => {
+    elementosFade.forEach((el) => {
         const top = el.getBoundingClientRect().top;
         if (top < window.innerHeight - 80) {
             el.classList.add("visible");
