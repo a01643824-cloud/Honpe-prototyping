@@ -2,93 +2,196 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Hunpe Prototyping</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Honpe Prototyping</title>
+    <meta name="description" content="Proyecto universitario con recomendaciones digitales para Honpe Prototyping.">
     <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
 
-<header class="hero">
-    <div class="overlay">
-        <h1>Hunpe Prototyping</h1>
-        <h2>Transforma tu idea en un prototipo real</h2>
-        <p>Sin conocimientos técnicos • Con guía paso a paso • Resultados reales</p>
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="brand">
+                <img src="assets/logo-honpe.webp" alt="Logo Honpe Prototyping" class="logo">
+                <span>Honpe Prototyping</span>
+            </div>
 
-        <button onclick="document.getElementById('formulario').scrollIntoView({behavior:'smooth'})">
-            Cotizar mi prototipo
-        </button>
-    </div>
-</header>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#problema">Problema</a></li>
+                    <li><a href="#solucion">Solución</a></li>
+                    <li><a href="#proyectos">Proyectos</a></li>
+                    <li><a href="#testimonios">Testimonios</a></li>
+                    <li><a href="#recomendaciones">Recomendaciones</a></li>
+                    <li><a href="#formulario">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-<section class="fade">
-    <h2>El problema</h2>
-    <p>Muchos emprendedores abandonan sus ideas por falta de claridad, confianza y visualización del resultado final.</p>
-</section>
+    <section class="hero" id="inicio">
+        <div class="overlay">
+            <p class="badge">Proyecto universitario • Propuesta digital para empresa real</p>
+            <h1>Honpe Prototyping</h1>
+            <h2>Propuesta web para fortalecer su presencia digital y facilitar la captación de clientes</h2>
+            <p class="hero-text">
+                Este proyecto escolar presenta una página web orientada a mostrar servicios,
+                ejemplos reales de prototipado, canales de contacto directos y una experiencia
+                más profesional para clientes potenciales de Honpe Prototyping.
+            </p>
 
-<section class="fade">
-    <h2>Nuestra solución</h2>
-    <ul>
-        <li>Chatbot inteligente</li>
-        <li>Simulación 3D del producto</li>
-        <li>Seguimiento en tiempo real</li>
-        <li>Asesoría con expertos</li>
-    </ul>
-</section>
+            <div class="hero-buttons">
+                <a href="#formulario" class="btn primary">Solicitar información</a>
+                <a href="#recomendaciones" class="btn secondary">Ver recomendaciones</a>
+            </div>
+        </div>
+    </section>
 
-<section class="fade">
-    <h2>¿Cómo funciona?</h2>
-    <ol>
-        <li>Describe tu idea</li>
-        <li>Recibe guía automática</li>
-        <li>Visualiza tu prototipo</li>
-        <li>Da seguimiento en tiempo real</li>
-    </ol>
-</section>
+    <main>
 
-<section class="fade">
-    <h2>Proyectos realizados</h2>
-    <div class="galeria">
-        <img src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc">
-        <img src="https://images.unsplash.com/photo-1581092334651-ddf26d9a09d0">
-        <img src="https://images.unsplash.com/photo-1581091870627-3c3f3c7c5d3f">
-    </div>
-</section>
+        <section id="problema" class="fade">
+            <h2>Problema detectado</h2>
+            <p>
+                Aunque Honpe Prototyping ofrece soluciones de fabricación y prototipado,
+                una presentación digital más clara y moderna puede ayudar a comunicar mejor
+                sus capacidades, mostrar proyectos realizados y facilitar el contacto con clientes.
+            </p>
+        </section>
 
-<section id="formulario" class="fade">
-    <h2>Cotiza tu prototipo</h2>
-    <form onsubmit="enviarForm(event)">
-        <input type="text" placeholder="¿Qué quieres crear?" required>
-        <input type="text" placeholder="¿Para qué lo necesitas?" required>
-        <input type="text" placeholder="Tamaño">
-        <input type="text" placeholder="Material">
-        <input type="number" placeholder="Cantidad">
-        <button type="submit">Enviar</button>
-    </form>
-</section>
+        <section id="solucion" class="fade">
+            <h2>Propuesta de solución digital</h2>
+            <div class="cards">
+                <article class="card">
+                    <h3>Presentación profesional</h3>
+                    <p>Una página moderna genera mayor confianza y mejora la imagen de la empresa ante nuevos clientes.</p>
+                </article>
 
-<section class="fade">
-    <h2>Seguimiento</h2>
-    <button onclick="estado()">Ver estado</button>
-    <p id="estado"></p>
-</section>
+                <article class="card">
+                    <h3>Galería real</h3>
+                    <p>Mostrar fotografías reales de piezas y procesos permite demostrar experiencia y calidad de trabajo.</p>
+                </article>
 
-<section class="fade">
-    <h2>Chatbot</h2>
-    <input type="text" id="chat" placeholder="Escribe tu duda...">
-    <button onclick="responder()">Enviar</button>
-    <p id="respuesta"></p>
-</section>
+                <article class="card">
+                    <h3>Contacto directo</h3>
+                    <p>Integrar WhatsApp y Facebook facilita la atención rápida y la generación de cotizaciones.</p>
+                </article>
 
-<section class="fade">
-    <h2>Contacto</h2>
-    <a href="https://wa.me/5213312345678?text=Hola%20quiero%20cotizar" target="_blank">📱 WhatsApp</a>
-    <br><br>
-    <a href="https://www.facebook.com/" target="_blank">📘 Facebook</a>
-</section>
+                <article class="card">
+                    <h3>Seguimiento digital</h3>
+                    <p>Un formulario conectado a backend permite registrar solicitudes y mejorar la organización comercial.</p>
+                </article>
+            </div>
+        </section>
 
-<a href="https://wa.me/5213312345678?text=Hola%20quiero%20cotizar" class="whatsapp" target="_blank">💬</a>
+        <section class="fade">
+            <h2>¿Cómo funcionaría para el cliente?</h2>
+            <ol class="steps">
+                <li>El cliente conoce la empresa y sus capacidades</li>
+                <li>Observa ejemplos reales de prototipos y manufactura</li>
+                <li>Solicita información o cotización mediante formulario o WhatsApp</li>
+                <li>La empresa registra la solicitud y da seguimiento</li>
+            </ol>
+        </section>
 
-<script src="script.js"></script>
+        <section id="proyectos" class="fade">
+            <h2>Ejemplos reales de trabajo</h2>
+            <p class="section-text">
+                Se integraron imágenes reales proporcionadas para representar el tipo de piezas,
+                componentes y procesos relacionados con Honpe Prototyping.
+            </p>
 
+            <div class="galeria">
+                <img src="assets/ejemplo1.jpg" alt="Pieza mecanizada azul">
+                <img src="assets/ejemplo2.jpg" alt="Componente automotriz negro">
+                <img src="assets/ejemplo3.jpg" alt="Proceso de maquinado industrial">
+            </div>
+        </section>
+
+        <section id="testimonios" class="fade">
+            <h2>Impacto esperado</h2>
+            <div class="cards">
+                <article class="card">
+                    <p>"Una página con imágenes reales transmite más confianza y seriedad."</p>
+                    <strong>Perspectiva comercial</strong>
+                </article>
+
+                <article class="card">
+                    <p>"Los canales directos como WhatsApp facilitan el contacto inmediato con posibles clientes."</p>
+                    <strong>Propuesta de mejora</strong>
+                </article>
+
+                <article class="card">
+                    <p>"La digitalización del formulario permite registrar solicitudes y mejorar el seguimiento."</p>
+                    <strong>Enfoque universitario</strong>
+                </article>
+            </div>
+        </section>
+
+        <section id="recomendaciones" class="fade">
+            <h2>Recomendaciones para Honpe Prototyping</h2>
+            <ul class="recommendations">
+                <li>Usar una página oficial con diseño profesional y adaptable a celular.</li>
+                <li>Integrar el logotipo oficial para reforzar identidad de marca.</li>
+                <li>Mostrar fotografías reales de proyectos, piezas y procesos.</li>
+                <li>Agregar botones visibles hacia WhatsApp y Facebook.</li>
+                <li>Implementar formularios digitales para registrar solicitudes.</li>
+                <li>Describir de forma clara los servicios, procesos y ventajas competitivas.</li>
+            </ul>
+        </section>
+
+        <section id="formulario" class="fade">
+            <h2>Solicita información o cotización</h2>
+            <form id="cotizacionForm">
+                <input type="text" id="nombre" placeholder="Nombre completo" required>
+                <input type="email" id="correo" placeholder="Correo electrónico" required>
+                <input type="text" id="idea" placeholder="¿Qué deseas fabricar o prototipar?" required>
+                <input type="text" id="uso" placeholder="¿Para qué lo necesitas?" required>
+                <input type="text" id="tamano" placeholder="Tamaño">
+                <input type="text" id="material" placeholder="Material">
+                <input type="number" id="cantidad" placeholder="Cantidad">
+                <textarea id="detalles" placeholder="Detalles adicionales"></textarea>
+                <button type="submit" class="btn-submit">Enviar solicitud</button>
+                <p id="mensajeForm"></p>
+            </form>
+        </section>
+
+        <section class="fade">
+            <h2>Seguimiento del proyecto</h2>
+            <button onclick="estado()" class="btn primary">Ver estado</button>
+            <p id="estado" class="result-text"></p>
+        </section>
+
+        <section class="fade">
+            <h2>Asistente virtual</h2>
+            <div class="chat-box">
+                <input type="text" id="chat" placeholder="Escribe tu duda...">
+                <button onclick="responder()" class="btn secondary">Enviar</button>
+            </div>
+            <p id="respuesta" class="result-text"></p>
+        </section>
+
+        <section class="fade contact-section">
+            <h2>Contacto real</h2>
+            <p>Canales directos integrados para mejorar la comunicación con clientes potenciales.</p>
+
+            <div class="contact-links">
+                <a href="https://wa.me/523330439148?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20Honpe%20Prototyping" target="_blank" class="contact-btn whatsapp-btn">
+                    WhatsApp
+                </a>
+
+                <a href="https://www.facebook.com/share/1D1BjbkmcW/" target="_blank" class="contact-btn facebook-btn">
+                    Facebook
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <a href="https://wa.me/523330439148?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20Honpe%20Prototyping" class="whatsapp" target="_blank">
+        💬
+    </a>
+
+    <script src="script.js"></script>
 </body>
 </html>
