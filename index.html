@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Prototipado 3D</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+    <h1>Convierte tu idea en un prototipo</h1>
+    <p>Sin conocimientos técnicos</p>
+    <button onclick="scrollToForm()">Cotizar mi idea</button>
+</header>
+
+<section>
+    <h2>¿Cómo funciona?</h2>
+    <p>Te guiamos paso a paso para transformar tu idea en un prototipo real.</p>
+</section>
+
+<section id="formulario">
+    <h2>Cotiza tu prototipo</h2>
+    <form>
+        <input type="text" placeholder="¿Qué quieres crear?" required>
+        <input type="text" placeholder="¿Para qué lo necesitas?" required>
+        <input type="text" placeholder="Tamaño aproximado">
+        <input type="text" placeholder="Material">
+        <input type="number" placeholder="Cantidad">
+        <button type="submit">Enviar</button>
+    </form>
+</section>
+
+<section>
+    <h2>Ejemplos de proyectos</h2>
+    <p>Aquí irán imágenes de prototipos</p>
+</section>
+
+<section>
+    <h2>Seguimiento de tu proyecto</h2>
+    <p>Consulta el avance en tiempo real</p>
+    <button onclick="verEstado()">Ver estado</button>
+    <p id="estado"></p>
+</section>
+
+<section>
+    <h2>Chatbot</h2>
+    <input type="text" id="chatInput" placeholder="Escribe tu duda...">
+    <button onclick="responder()">Enviar</button>
+    <p id="chatRespuesta"></p>
+</section>
+
+<section>
+    <h2>Contacto</h2>
+    <a href="https://wa.me/">WhatsApp</a>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
