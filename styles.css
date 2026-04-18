@@ -353,5 +353,12 @@ form textarea {
     .contact-btn {
         width: 100%;
         text-align: center;
+    .footer {
+    background: #0f172a;
+    color: white;
+    text-align: center;
+    padding: 22px;
+    margin-top: 30px;
+}
     }
 }
