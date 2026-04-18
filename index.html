@@ -1,79 +1,80 @@
 <!DOCTYPE html>
-<body>
-
-<header>
-    <h1>Convierte tu idea en un prototipo real</h1>
-</header>
-
-<section>
-    <h2>El problema</h2>
-    <p>Muchos emprendedores abandonan...</p>
-</section>
-
-<section>
-    <h2>Nuestra solución</h2>
-    <ul>
-        <li>Chatbot</li>
-        <li>Simulación 3D</li>
-    </ul>
-</section>
-
-</body>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Prototipado 3D</title>
+    <title>Hunpe Prototyping</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
-<header>
-    <h1>Convierte tu idea en un prototipo</h1>
-    <p>Sin conocimientos técnicos</p>
-    <button onclick="scrollToForm()">Cotizar mi idea</button>
+<header class="hero">
+    <h1>Hunpe Prototyping</h1>
+    <h2>Convierte tu idea en un prototipo real</h2>
+    <p>Sin conocimientos técnicos • Con guía paso a paso</p>
+    <button onclick="scrollToForm()">Cotizar mi prototipo</button>
 </header>
 
-<section>
-    <h2>¿Cómo funciona?</h2>
-    <p>Te guiamos paso a paso para transformar tu idea en un prototipo real.</p>
+<section class="fade">
+    <h2>El problema</h2>
+    <p>Muchos emprendedores abandonan sus ideas por falta de claridad, confianza y visualización.</p>
 </section>
 
-<section id="formulario">
+<section class="fade">
+    <h2>Nuestra solución</h2>
+    <ul>
+        <li>Chatbot inteligente</li>
+        <li>Simulación 3D</li>
+        <li>Seguimiento en tiempo real</li>
+        <li>Asesoría con expertos</li>
+    </ul>
+</section>
+
+<section class="fade">
+    <h2>¿Cómo funciona?</h2>
+    <ol>
+        <li>Describe tu idea</li>
+        <li>Recibe guía automática</li>
+        <li>Visualiza tu prototipo</li>
+        <li>Da seguimiento</li>
+    </ol>
+</section>
+
+<section id="formulario" class="fade">
     <h2>Cotiza tu prototipo</h2>
-    <form>
+    <form onsubmit="enviarForm(event)">
         <input type="text" placeholder="¿Qué quieres crear?" required>
         <input type="text" placeholder="¿Para qué lo necesitas?" required>
-        <input type="text" placeholder="Tamaño aproximado">
+        <input type="text" placeholder="Tamaño">
         <input type="text" placeholder="Material">
         <input type="number" placeholder="Cantidad">
         <button type="submit">Enviar</button>
     </form>
 </section>
 
-<section>
-    <h2>Ejemplos de proyectos</h2>
-    <p>Aquí irán imágenes de prototipos</p>
-</section>
-
-<section>
-    <h2>Seguimiento de tu proyecto</h2>
-    <p>Consulta el avance en tiempo real</p>
-    <button onclick="verEstado()">Ver estado</button>
+<section class="fade">
+    <h2>Seguimiento</h2>
+    <button onclick="estado()">Ver estado</button>
     <p id="estado"></p>
 </section>
 
-<section>
+<section class="fade">
     <h2>Chatbot</h2>
-    <input type="text" id="chatInput" placeholder="Escribe tu duda...">
+    <input type="text" id="chat" placeholder="Escribe tu duda...">
     <button onclick="responder()">Enviar</button>
-    <p id="chatRespuesta"></p>
+    <p id="respuesta"></p>
 </section>
 
-<section>
+<section class="fade">
     <h2>Contacto</h2>
-    <a href="https://wa.me/">WhatsApp</a>
+    <a href="https://wa.me/5213312345678?text=Hola%20quiero%20cotizar" target="_blank">WhatsApp</a>
+    <br><br>
+    <a href="https://www.facebook.com/" target="_blank">Facebook</a>
 </section>
+
+<a href="https://wa.me/5213312345678?text=Hola%20quiero%20cotizar" class="whatsapp" target="_blank">💬</a>
 
 <script src="script.js"></script>
+
 </body>
 </html>
