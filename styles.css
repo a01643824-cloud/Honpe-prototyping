@@ -5,10 +5,19 @@ body {
 }
 
 .hero {
-    background: linear-gradient(135deg, #0a2540, #0077ff);
+    background: url('https://images.unsplash.com/photo-1581091215367-59ab6b3c0d8b') center/cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.overlay {
+    background: rgba(0,0,0,0.6);
+    padding: 40px;
     color: white;
     text-align: center;
-    padding: 100px 20px;
+    border-radius: 12px;
 }
 
 button {
@@ -48,6 +57,18 @@ input {
     transform: translateY(0);
 }
 
+/* Galería */
+.galeria {
+    display: flex;
+    gap: 10px;
+}
+
+.galeria img {
+    width: 100%;
+    max-width: 30%;
+    border-radius: 10px;
+}
+
 /* WhatsApp flotante */
 .whatsapp {
     position: fixed;
@@ -55,7 +76,15 @@ input {
     right: 20px;
     background: #25D366;
     color: white;
-    font-size: 24px;
-    padding: 15px;
+    font-size: 26px;
+    padding: 18px;
     border-radius: 50%;
+    text-decoration: none;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
 }
