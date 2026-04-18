@@ -1,7 +1,3 @@
-function scrollToForm() {
-    document.getElementById("formulario").scrollIntoView();
-}
-
 function enviarForm(e) {
     e.preventDefault();
     alert("Solicitud enviada correctamente");
@@ -16,17 +12,25 @@ function responder() {
     let respuesta = "";
 
     if(texto.includes("precio")) {
-        respuesta = "Depende del material y complejidad.";
-    } else if(texto.includes("material")) {
+        respuesta = "El precio depende del diseño, materiales y complejidad.";
+    } 
+    else if(texto.includes("material")) {
         respuesta = "Trabajamos con plástico, metal, silicona y más.";
-    } else {
-        respuesta = "Un asesor te ayudará pronto.";
+    } 
+    else if(texto.includes("tiempo")) {
+        respuesta = "El desarrollo toma entre 1 y 3 semanas.";
+    }
+    else if(texto.includes("hola")) {
+        respuesta = "¡Hola! 👋 Soy tu asistente virtual.";
+    }
+    else {
+        respuesta = "Puedo ayudarte con precios, materiales o proceso 😊";
     }
 
     document.getElementById("respuesta").innerText = respuesta;
 }
 
-/* Animaciones al hacer scroll */
+/* Animaciones */
 window.addEventListener("scroll", () => {
     let elementos = document.querySelectorAll(".fade");
     elementos.forEach(el => {
