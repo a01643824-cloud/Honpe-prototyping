@@ -16,7 +16,11 @@
                 <span>Honpe Prototyping</span>
             </a>
 
-            <nav>
+            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
+                ☰
+            </button>
+
+            <nav class="nav-menu" id="navMenu">
                 <ul class="nav-links">
                     <li><a href="#como-funciona">Cómo funciona</a></li>
                     <li><a href="#cotizacion">Cotización</a></li>
@@ -31,6 +35,9 @@
     </header>
 
     <section class="hero" id="inicio">
+        <div class="hero-bg-shape shape-1"></div>
+        <div class="hero-bg-shape shape-2"></div>
+
         <div class="hero-content">
             <div class="hero-text-block fade">
                 <p class="badge">Guía simple • Visualización 3D • Seguimiento claro</p>
@@ -47,7 +54,7 @@
                 </div>
             </div>
 
-            <div class="hero-glass fade">
+            <div class="hero-panel fade">
                 <div class="hero-mini-card">
                     <span class="mini-label">Estado actual</span>
                     <h3>Solicitud recibida</h3>
@@ -57,13 +64,38 @@
                 <div class="hero-mini-card">
                     <span class="mini-label">Siguiente paso</span>
                     <h3>Validación inicial</h3>
-                    <p>Definir uso, tamaño, material y cantidad para avanzar con más claridad y menos fricción.</p>
+                    <p>Definir uso, tamaño, material y cantidad para avanzar con menos fricción.</p>
+                </div>
+
+                <div class="hero-mini-card">
+                    <span class="mini-label">Experiencia</span>
+                    <h3>Proceso guiado</h3>
+                    <p>Formulario simple, orientación virtual, simulación conceptual y seguimiento de proyecto.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <main>
+
+        <section class="metrics fade">
+            <div class="metric-card">
+                <strong>Proceso más claro</strong>
+                <span>Menos confusión al iniciar</span>
+            </div>
+            <div class="metric-card">
+                <strong>Vista conceptual</strong>
+                <span>Mayor confianza antes de fabricar</span>
+            </div>
+            <div class="metric-card">
+                <strong>Seguimiento continuo</strong>
+                <span>Más visibilidad del proyecto</span>
+            </div>
+            <div class="metric-card">
+                <strong>Contacto inmediato</strong>
+                <span>WhatsApp y Facebook integrados</span>
+            </div>
+        </section>
 
         <section id="como-funciona" class="fade">
             <h2>Cómo funciona</h2>
@@ -88,7 +120,7 @@
                 <article class="step-card">
                     <span class="step-number">3</span>
                     <h3>Visualiza tu prototipo</h3>
-                    <p>Antes de avanzar, puedes revisar una vista previa conceptual del producto para entender mejor el resultado.</p>
+                    <p>Puedes revisar una vista previa conceptual del producto para entender mejor el resultado esperado.</p>
                 </article>
 
                 <article class="step-card">
@@ -99,7 +131,7 @@
             </div>
         </section>
 
-        <section class="fade problem-section">
+        <section class="fade">
             <div class="split-grid">
                 <div>
                     <h2>Hacemos entendible lo complejo</h2>
@@ -210,17 +242,19 @@
                 forma, escala y posibles ajustes del prototipo.
             </p>
 
-            <div class="model-preview premium-model">
-                <div class="model-card premium-card">
+            <div class="model-preview">
+                <div class="model-card premium-surface">
                     <div class="model-view model-visual">
                         <div class="cube cube-1"></div>
                         <div class="cube cube-2"></div>
                         <div class="cube cube-3"></div>
+                        <div class="orbit orbit-1"></div>
+                        <div class="orbit orbit-2"></div>
                         <span class="model-overlay-text">Simulación 3D conceptual</span>
                     </div>
                 </div>
 
-                <div class="model-details premium-card">
+                <div class="model-details premium-surface">
                     <h3>Vista previa del proyecto</h3>
                     <ul>
                         <li><strong>Tipo:</strong> Prototipo funcional</li>
@@ -243,29 +277,29 @@
             </p>
 
             <div class="tracking-dashboard">
-                <div class="tracking-summary premium-card light-card">
+                <div class="tracking-summary premium-surface">
                     <h3>Proyecto activo</h3>
                     <p class="tracking-big">Prototipo funcional</p>
                     <span class="tracking-status">En progreso</span>
                 </div>
 
-                <div class="tracking-summary premium-card light-card">
+                <div class="tracking-summary premium-surface">
                     <h3>Última actualización</h3>
                     <p>Se validó la información inicial del cliente y se prepara la simulación conceptual.</p>
                 </div>
 
-                <div class="tracking-summary premium-card light-card">
+                <div class="tracking-summary premium-surface">
                     <h3>Fecha estimada</h3>
                     <p>22 de abril de 2026</p>
                 </div>
             </div>
 
-            <div class="tracking-card premium-card light-card">
-                <div class="progress-bar premium-progress">
+            <div class="tracking-card premium-surface">
+                <div class="progress-bar">
                     <div class="progress-fill"></div>
                 </div>
 
-                <div class="tracking-steps premium-steps">
+                <div class="tracking-steps">
                     <div class="tracking-step active">Solicitud</div>
                     <div class="tracking-step active">Revisión</div>
                     <div class="tracking-step active">Diseño</div>
@@ -286,7 +320,7 @@
             </p>
 
             <div class="galeria">
-                <div class="gallery-item">
+                <div class="gallery-item premium-surface">
                     <img src="assets/ejemplo1.jpg" alt="Pieza mecanizada azul">
                     <div class="gallery-caption">
                         <h3>Pieza mecanizada</h3>
@@ -294,7 +328,7 @@
                     </div>
                 </div>
 
-                <div class="gallery-item">
+                <div class="gallery-item premium-surface">
                     <img src="assets/ejemplo2.jpg" alt="Componente industrial negro">
                     <div class="gallery-caption">
                         <h3>Componente estructural</h3>
@@ -302,7 +336,7 @@
                     </div>
                 </div>
 
-                <div class="gallery-item">
+                <div class="gallery-item premium-surface">
                     <img src="assets/ejemplo3.jpg" alt="Proceso de maquinado">
                     <div class="gallery-caption">
                         <h3>Proceso de manufactura</h3>
