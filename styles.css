@@ -65,6 +65,26 @@ a {
     padding: 4px;
 }
 
+.menu-toggle {
+    display: none;
+    background: linear-gradient(135deg, #00c896, #03a87f);
+    color: white;
+    font-size: 1.6rem;
+    line-height: 1;
+    width: 58px;
+    height: 58px;
+    border-radius: 18px;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    cursor: pointer;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+}
+
 .nav-links {
     list-style: none;
     display: flex;
@@ -119,6 +139,11 @@ a {
     box-shadow: 0 20px 40px rgba(0,0,0,0.18);
 }
 
+.hero-panel {
+    display: grid;
+    gap: 18px;
+}
+
 .hero-mini-card,
 .premium-card {
     background: rgba(255,255,255,0.10);
@@ -160,12 +185,14 @@ a {
     font-size: 3.3rem;
     line-height: 1.1;
     margin: 0 0 12px;
+    color: white;
 }
 
 .hero h2 {
     font-size: 1.4rem;
     font-weight: normal;
     margin: 0 0 18px;
+    color: white;
 }
 
 .hero-text {
@@ -214,8 +241,7 @@ button:hover {
 }
 
 .primary,
-.btn-submit,
-button {
+.btn-submit {
     background: linear-gradient(135deg, #00c896, #03a87f);
     color: white;
 }
@@ -254,11 +280,34 @@ section h2 {
     margin-bottom: 26px;
 }
 
+.metrics,
 .steps-grid,
 .galeria,
 .form-grid {
     display: grid;
     gap: 18px;
+}
+
+.metrics {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.metric-card {
+    background: #f8fafc;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 22px;
+    display: grid;
+    gap: 8px;
+}
+
+.metric-card strong {
+    color: var(--dark);
+}
+
+.metric-card span {
+    color: var(--muted);
+    line-height: 1.5;
 }
 
 .steps-grid {
@@ -316,6 +365,7 @@ section h2 {
 
 .form-grid {
     grid-template-columns: repeat(2, 1fr);
+    align-items: start;
 }
 
 form input,
@@ -327,6 +377,7 @@ form textarea {
     border-radius: 14px;
     font-size: 1rem;
     background: white;
+    font-family: inherit;
 }
 
 form textarea {
@@ -334,6 +385,19 @@ form textarea {
     resize: vertical;
     margin-top: 16px;
     margin-bottom: 16px;
+}
+
+.field-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.field-help {
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--muted);
 }
 
 .form-message,
@@ -403,13 +467,6 @@ form textarea {
     grid-template-columns: 0.9fr 1.1fr;
     gap: 20px;
     align-items: stretch;
-}
-
-.premium-model .premium-card {
-    background: linear-gradient(180deg, #ffffff, #f7fafc);
-    border: 1px solid #dce5ef;
-    box-shadow: 0 18px 35px rgba(15, 23, 42, 0.08);
-    color: var(--text);
 }
 
 .model-card {
@@ -507,6 +564,8 @@ form textarea {
 .tracking-summary {
     border-radius: 20px;
     padding: 22px;
+    background: #f8fafc;
+    border: 1px solid var(--border);
 }
 
 .tracking-summary h3 {
@@ -546,11 +605,6 @@ form textarea {
     margin-bottom: 20px;
 }
 
-.premium-progress {
-    height: 18px;
-    background: #e8eef5;
-}
-
 .progress-fill {
     width: 55%;
     height: 100%;
@@ -572,10 +626,6 @@ form textarea {
     background: #eef2f7;
     color: #556070;
     font-size: 0.94rem;
-}
-
-.premium-steps .tracking-step {
-    border: 1px solid #dae4ee;
 }
 
 .tracking-step.active {
@@ -639,6 +689,39 @@ form textarea {
 
 .facebook-btn {
     background: #1877F2;
+}
+
+.contact-form-box {
+    max-width: 760px;
+    margin: 28px auto 0;
+    padding: 24px;
+    background: #f8fafc;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    text-align: left;
+}
+
+.contact-form-box h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: var(--dark);
+}
+
+.contact-form-text {
+    margin-bottom: 18px;
+    color: var(--muted);
+    line-height: 1.6;
+}
+
+.contact-form-sim {
+    display: grid;
+    gap: 14px;
+}
+
+.contact-form-sim textarea {
+    min-height: 120px;
+    resize: vertical;
+    margin: 0;
 }
 
 .footer {
@@ -715,7 +798,8 @@ form textarea {
     .hero-content,
     .split-grid,
     .model-preview,
-    .galeria {
+    .galeria,
+    .metrics {
         grid-template-columns: 1fr 1fr;
     }
 
@@ -726,8 +810,28 @@ form textarea {
 
 @media (max-width: 900px) {
     .nav-container {
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .menu-toggle {
+        display: inline-flex;
+    }
+
+    .nav-menu {
+        display: none;
+        width: 100%;
+    }
+
+    .nav-menu.active {
+        display: block;
+    }
+
+    .nav-links {
         flex-direction: column;
-        align-items: flex-start;
+        gap: 14px;
+        width: 100%;
+        padding-top: 12px;
     }
 
     .hero-content,
@@ -737,7 +841,8 @@ form textarea {
     .galeria,
     .steps-grid,
     .tracking-steps,
-    .tracking-dashboard {
+    .tracking-dashboard,
+    .metrics {
         grid-template-columns: 1fr;
     }
 
@@ -756,11 +861,17 @@ form textarea {
     }
 }
 
-@media (max-width: 600px) {
-    .nav-links {
-        gap: 10px;
+@media (min-width: 901px) {
+    .menu-toggle {
+        display: none;
     }
 
+    .nav-menu {
+        display: flex !important;
+    }
+}
+
+@media (max-width: 600px) {
     .hero-buttons,
     .contact-links,
     .chat-box {
@@ -776,6 +887,10 @@ form textarea {
         text-align: center;
     }
 
+    .chat-suggestions {
+        flex-direction: column;
+    }
+
     main {
         padding: 8px;
     }
@@ -783,5 +898,14 @@ form textarea {
     section {
         margin: 18px auto;
         border-radius: 18px;
+    }
+
+    .logo {
+        width: 46px;
+        height: 46px;
+    }
+
+    .brand span {
+        font-size: 0.98rem;
     }
 }
