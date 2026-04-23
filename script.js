@@ -3,6 +3,11 @@ const mensajeForm = document.getElementById("mensajeForm");
 const respuesta = document.getElementById("respuesta");
 const chatInput = document.getElementById("chat");
 const elementosFade = document.querySelectorAll(".fade");
+const menuToggle = document.getElementById("menuToggle");
+const navMenu = document.getElementById("navMenu");
+
+const contactoTecnicoForm = document.getElementById("contactoTecnicoForm");
+const mensajeContactoTecnico = document.getElementById("mensajeContactoTecnico");
 
 if (form) {
     form.addEventListener("submit", function (e) {
@@ -20,6 +25,24 @@ if (form) {
 
         mensajeForm.innerText = "Solicitud enviada correctamente. Un asesor puede ayudarte a continuar con tu prototipo.";
         form.reset();
+    });
+}
+
+if (contactoTecnicoForm) {
+    contactoTecnicoForm.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const correoTecnico = document.getElementById("correoTecnico").value.trim();
+        const dudaTecnica = document.getElementById("dudaTecnica").value.trim();
+
+        if (!correoTecnico || !dudaTecnica) {
+            mensajeContactoTecnico.innerText = "Por favor completa tu correo y escribe tu duda.";
+            return;
+        }
+
+        mensajeContactoTecnico.innerText =
+            "Gracias. Tu mensaje fue enviado correctamente. Un técnico se pondrá en contacto contigo pronto.";
+        contactoTecnicoForm.reset();
     });
 }
 
@@ -67,6 +90,28 @@ function mostrarElementos() {
         if (top < window.innerHeight - 80) {
             el.classList.add("visible");
         }
+    });
+}
+
+if (chatInput) {
+    chatInput.addEventListener("keypress", function (e) {
+        if (e.key === "Enter") {
+            e.preventDefault();
+            responder();
+        }
+    });
+}
+
+if (menuToggle && navMenu) {
+    menuToggle.addEventListener("click", function () {
+        navMenu.classList.toggle("active");
+    });
+
+    const navLinks = navMenu.querySelectorAll("a");
+    navLinks.forEach((link) => {
+        link.addEventListener("click", function () {
+            navMenu.classList.remove("active");
+        });
     });
 }
 
