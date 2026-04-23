@@ -180,14 +180,20 @@
                         <option>Grande</option>
                     </select>
 
-                    <select id="material">
-                        <option value="">Selecciona un material aproximado</option>
-                        <option>Plástico</option>
-                        <option>Metal</option>
-                        <option>Silicona</option>
-                        <option>Madera</option>
-                        <option>No estoy seguro</option>
-                    </select>
+                    <div class="field-group">
+                        <select id="material">
+                            <option value="">Selecciona un tipo de material</option>
+                            <option>Plástico</option>
+                            <option>Metal</option>
+                            <option>Silicona</option>
+                            <option>Madera</option>
+                            <option>No estoy seguro</option>
+                        </select>
+                        <p class="field-help">
+                            No tienes que ser experto, solo dinos qué material te gustaría usar.
+                            Nosotros validaremos si es el correcto o te sugeriremos otro ideal para tu proyecto.
+                        </p>
+                    </div>
 
                     <select id="cantidad">
                         <option value="">Cantidad estimada</option>
@@ -200,7 +206,7 @@
                     <input type="text" id="referencia" placeholder="Referencia visual o producto similar">
                 </div>
 
-                <textarea id="detalles" placeholder="Cuéntanos más detalles: medidas aproximadas, uso, color, acabados o cualquier idea importante"></textarea>
+                <textarea id="detalles" placeholder="Cuéntanos algún otro detalle importante para que tu idea sea más clara"></textarea>
 
                 <button type="submit" class="btn-submit">Enviar solicitud</button>
                 <p id="mensajeForm" class="form-message"></p>
@@ -215,15 +221,15 @@
 
             <div class="assistant-demo">
                 <div class="chat-suggestions">
-                    <button onclick="preguntaRapida('No sé qué material usar')">No sé qué material usar</button>
-                    <button onclick="preguntaRapida('¿Qué necesito para cotizar?')">¿Qué necesito para cotizar?</button>
-                    <button onclick="preguntaRapida('Quiero ver cómo se vería mi producto')">Quiero ver cómo se vería mi producto</button>
-                    <button onclick="preguntaRapida('¿Cuánto tiempo tarda?')">¿Cuánto tiempo tarda?</button>
+                    <button type="button" onclick="preguntaRapida('No sé qué material usar')">No sé qué material usar</button>
+                    <button type="button" onclick="preguntaRapida('¿Qué necesito para cotizar?')">¿Qué necesito para cotizar?</button>
+                    <button type="button" onclick="preguntaRapida('Quiero ver cómo se vería mi producto')">Quiero ver cómo se vería mi producto</button>
+                    <button type="button" onclick="preguntaRapida('¿Cuánto tiempo tarda?')">¿Cuánto tiempo tarda?</button>
                 </div>
 
                 <div class="chat-box">
                     <input type="text" id="chat" placeholder="Escribe tu duda...">
-                    <button onclick="responder()" class="btn secondary">Enviar</button>
+                    <button type="button" onclick="responder()" class="btn secondary">Enviar</button>
                 </div>
 
                 <div class="chat-response-box premium-chat">
@@ -264,7 +270,7 @@
                         <li><strong>Siguiente paso:</strong> Ajustes técnicos</li>
                     </ul>
 
-                    <button class="btn primary" onclick="mostrarModelo()">Cargar ejemplo</button>
+                    <button class="btn primary" type="button" onclick="mostrarModelo()">Cargar ejemplo</button>
                     <p id="modeloMensaje" class="result-text"></p>
                 </div>
             </div>
@@ -308,7 +314,7 @@
                     <div class="tracking-step">Producción</div>
                 </div>
 
-                <button class="btn primary" onclick="estado()">Ver actualización</button>
+                <button class="btn primary" type="button" onclick="estado()">Ver actualización</button>
                 <p id="estado" class="result-text"></p>
             </div>
         </section>
@@ -360,6 +366,20 @@
                 <a href="https://www.facebook.com/share/1D1BjbkmcW/" target="_blank" class="contact-btn facebook-btn">
                     Facebook
                 </a>
+            </div>
+
+            <div class="contact-form-box">
+                <h3>¿Prefieres que un técnico te contacte?</h3>
+                <p class="contact-form-text">
+                    Déjanos tu correo y tus dudas. Un técnico se pondrá en contacto contigo.
+                </p>
+
+                <form id="contactoTecnicoForm" class="contact-form-sim">
+                    <input type="email" id="correoTecnico" placeholder="Tu correo electrónico" required>
+                    <textarea id="dudaTecnica" placeholder="Escribe aquí tu duda o lo que necesitas" required></textarea>
+                    <button type="submit" class="btn-submit">Enviar duda</button>
+                    <p id="mensajeContactoTecnico" class="form-message"></p>
+                </form>
             </div>
         </section>
 
