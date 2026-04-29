@@ -12,7 +12,7 @@
 <header class="navbar">
     <div class="nav-container">
         <a href="#inicio" class="brand">
-            <img src="assets/logo-honpe.webp" alt="Logo Honpe Prototyping" class="logo">
+            <img src="assets/logo-honpe.webp" alt="Logo Honpe Prototyping" class="logo" onerror="this.onerror=null; this.src='https://placehold.co/200x200/000000/ffffff?text=HONPE';">
             <span>
                 <strong>HONPE</strong>
                 <small>ProtoSphere</small>
@@ -26,7 +26,7 @@
         <nav class="nav-menu" id="navMenu">
             <ul class="nav-links">
                 <li><a href="#como-funciona">Cómo funciona</a></li>
-               <li><a href="#chatbot">Asistente</a></li>
+                <li><a href="#chatbot">Asistente</a></li>
                 <li><a href="#cotizacion">Cotización</a></li>
                 <li><a href="#modelo3d">Modelo 3D</a></li>
                 <li><a href="#seguimiento">Seguimiento</a></li>
@@ -53,8 +53,8 @@
             </p>
 
             <div class="hero-buttons">
-                <a href="#cotizacion" class="btn primary">Cotizar mi prototipo</a>
-                <a href="#como-funciona" class="btn secondary">Ver proceso</a>
+                <a href="#chatbot" class="btn primary">Hablar con asistente</a>
+                <a href="#cotizacion" class="btn secondary">Cotizar mi prototipo</a>
             </div>
         </div>
 
@@ -171,34 +171,6 @@
             </div>
         </div>
     </section>
-<section class="fade">
-        <div class="split-grid">
-            <div>
-                <p class="section-tag">Claridad técnica</p>
-                <h2>Hacemos entendible lo complejo</h2>
-                <p>
-                    Muchas personas tienen una idea, pero no saben cómo explicarla técnicamente.
-                    Ahí es donde normalmente aparece la frustración, la duda y el abandono del proceso.
-                </p>
-                <p>
-                    Esta experiencia está diseñada para convertir una idea general en información clara
-                    que permita cotizar, orientar y desarrollar un prototipo con mayor seguridad.
-                </p>
-            </div>
-
-            <div class="info-box">
-                <h3>Lo importante no es saber términos técnicos</h3>
-                <p>Lo importante es poder responder con claridad:</p>
-                <ul>
-                    <li>¿Qué quieres hacer?</li>
-                    <li>¿Para qué lo quieres?</li>
-                    <li>¿Qué tamaño tiene?</li>
-                    <li>¿Qué material imaginas?</li>
-                    <li>¿Cuántas piezas necesitas?</li>
-                </ul>
-            </div>
-        </div>
-    </section>
 
     <section id="cotizacion" class="fade">
         <p class="section-tag">Cotización</p>
@@ -253,6 +225,36 @@
             <p id="mensajeForm" class="form-message"></p>
         </form>
     </section>
+
+    <section class="fade">
+        <div class="split-grid">
+            <div>
+                <p class="section-tag">Claridad técnica</p>
+                <h2>Hacemos entendible lo complejo</h2>
+                <p>
+                    Muchas personas tienen una idea, pero no saben cómo explicarla técnicamente.
+                    Ahí es donde normalmente aparece la frustración, la duda y el abandono del proceso.
+                </p>
+                <p>
+                    Esta experiencia está diseñada para convertir una idea general en información clara
+                    que permita cotizar, orientar y desarrollar un prototipo con mayor seguridad.
+                </p>
+            </div>
+
+            <div class="info-box">
+                <h3>Lo importante no es saber términos técnicos</h3>
+                <p>Lo importante es poder responder con claridad:</p>
+                <ul>
+                    <li>¿Qué quieres hacer?</li>
+                    <li>¿Para qué lo quieres?</li>
+                    <li>¿Qué tamaño tiene?</li>
+                    <li>¿Qué material imaginas?</li>
+                    <li>¿Cuántas piezas necesitas?</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
     <section id="modelo3d" class="fade">
         <p class="section-tag">Visualización</p>
         <h2>Visualización del modelo 3D</h2>
@@ -264,11 +266,12 @@
         <div class="model-preview">
             <div class="model-card premium-surface">
                 <div class="model-view model-visual">
-                    <div class="cube cube-1"></div>
-                    <div class="cube cube-2"></div>
-                    <div class="cube cube-3"></div>
-                    <div class="orbit orbit-1"></div>
-                    <div class="orbit orbit-2"></div>
+                    <img
+                        src="assets/modelo3d.jpg"
+                        alt="Visualización 3D del prototipo"
+                        class="model-image"
+                        onerror="this.onerror=null; this.src='https://placehold.co/900x600/05070c/ffffff?text=Visualizacion+3D';"
+                    >
                     <span class="model-overlay-text">Simulación 3D conceptual</span>
                 </div>
             </div>
@@ -342,7 +345,7 @@
 
         <div class="galeria">
             <div class="gallery-item premium-surface">
-                <img src="assets/ejemplo1.jpg" alt="Pieza mecanizada azul">
+                <img src="assets/ejemplo1.jpg" alt="Pieza mecanizada azul" onerror="this.onerror=null; this.src='https://placehold.co/900x600/111827/ffffff?text=Proyecto+1';">
                 <div class="gallery-caption">
                     <h3>Pieza mecanizada</h3>
                     <p>Ejemplo de componente desarrollado con enfoque en detalle y precisión.</p>
@@ -350,7 +353,7 @@
             </div>
 
             <div class="gallery-item premium-surface">
-                <img src="assets/ejemplo2.jpg" alt="Componente industrial negro">
+                <img src="assets/ejemplo2.jpg" alt="Componente industrial negro" onerror="this.onerror=null; this.src='https://placehold.co/900x600/111827/ffffff?text=Proyecto+2';">
                 <div class="gallery-caption">
                     <h3>Componente estructural</h3>
                     <p>Visualización de pieza aplicada a soluciones técnicas e industriales.</p>
@@ -358,7 +361,7 @@
             </div>
 
             <div class="gallery-item premium-surface">
-                <img src="assets/ejemplo3.jpg" alt="Proceso de maquinado">
+                <img src="assets/ejemplo3.jpg" alt="Proceso de maquinado" onerror="this.onerror=null; this.src='https://placehold.co/900x600/111827/ffffff?text=Proyecto+3';">
                 <div class="gallery-caption">
                     <h3>Proceso de manufactura</h3>
                     <p>Ejemplo del tipo de desarrollo y producción asociado al proyecto del cliente.</p>
@@ -403,7 +406,7 @@
 
 <footer class="footer">
     <div class="footer-content">
-        <img src="assets/logo-honpe.webp" alt="Logo Honpe Prototyping" class="footer-logo">
+        <img src="assets/logo-honpe.webp" alt="Logo Honpe Prototyping" class="footer-logo" onerror="this.onerror=null; this.src='https://placehold.co/200x200/000000/ffffff?text=HONPE';">
         <p>Honpe ProtoSphere</p>
         <span>Soluciones para convertir ideas en prototipos reales</span>
     </div>
