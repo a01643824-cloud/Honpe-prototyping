@@ -248,11 +248,37 @@
                 forma, escala y posibles ajustes del prototipo.
             </p>
 
-            <div class="model-view model-visual image-3d-view">
-    <img src="assets/Diseno-3d.jpeg" alt="Visualización 3D" class="modelo-3d-img">
-    <span class="model-overlay-text">Visualización 3D del prototipo</span>
+            <div class="model-preview">
+
+    <div class="model-card premium-surface">
+        <div class="model-view model-visual image-3d-view">
+
+            <img src="assets/Diseno-3d.jpeg" 
+                 alt="Visualización 3D" 
+                 class="modelo-3d-img">
+
+            <span class="model-overlay-text">
+                Visualización 3D del prototipo
+            </span>
+
+        </div>
+    </div>
+
+    <div class="model-details premium-surface">
+        <h3>Vista previa del proyecto</h3>
+        <ul>
+            <li><strong>Tipo:</strong> Prototipo funcional</li>
+            <li><strong>Material sugerido:</strong> Plástico técnico</li>
+            <li><strong>Escala:</strong> Mediana</li>
+            <li><strong>Acabado:</strong> Validación inicial</li>
+            <li><strong>Siguiente paso:</strong> Ajustes técnicos</li>
+        </ul>
+
+        <button class="btn primary" type="button" onclick="mostrarModelo()">Cargar ejemplo</button>
+        <p id="modeloMensaje" class="result-text"></p>
+    </div>
+
 </div>
-                </div>
 
                 <div class="model-details premium-surface">
                     <h3>Vista previa del proyecto</h3>
