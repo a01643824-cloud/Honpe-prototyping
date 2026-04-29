@@ -23,8 +23,7 @@ if (form) {
             return;
         }
 
-        mensajeForm.innerText =
-            "Hemos recibido tu solicitud con éxito. Tiene un costo de 3500 pesos y dura 3 días su fabricación.";
+        mensajeForm.innerText = "Solicitud enviada correctamente. Un asesor puede ayudarte a continuar con tu prototipo.";
         form.reset();
     });
 }
@@ -48,11 +47,14 @@ if (contactoTecnicoForm) {
 }
 
 function preguntaRapida(texto) {
+    if (!chatInput) return;
     chatInput.value = texto;
     responder();
 }
 
 function responder() {
+    if (!chatInput || !respuesta) return;
+
     const texto = chatInput.value.toLowerCase().trim();
     let mensaje = "";
 
@@ -76,12 +78,18 @@ function responder() {
 }
 
 function estado() {
-    document.getElementById("estado").innerText =
+    const estadoElemento = document.getElementById("estado");
+    if (!estadoElemento) return;
+
+    estadoElemento.innerText =
         "Actualización: ya se revisó la información inicial del proyecto y el siguiente paso estimado es la simulación conceptual del prototipo.";
 }
 
 function mostrarModelo() {
-    document.getElementById("modeloMensaje").innerText =
+    const modeloMensaje = document.getElementById("modeloMensaje");
+    if (!modeloMensaje) return;
+
+    modeloMensaje.innerText =
         "Vista previa cargada: esta simulación permite validar forma general, escala estimada y siguientes ajustes del proyecto.";
 }
 
