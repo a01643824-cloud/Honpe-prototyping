@@ -26,8 +26,8 @@
         <nav class="nav-menu" id="navMenu">
             <ul class="nav-links">
                 <li><a href="#como-funciona">Cómo funciona</a></li>
+               <li><a href="#chatbot">Asistente</a></li>
                 <li><a href="#cotizacion">Cotización</a></li>
-                <li><a href="#chatbot">Asistente</a></li>
                 <li><a href="#modelo3d">Modelo 3D</a></li>
                 <li><a href="#seguimiento">Seguimiento</a></li>
                 <li><a href="#proyectos">Proyectos</a></li>
@@ -143,7 +143,35 @@
         </div>
     </section>
 
-    <section class="fade">
+    <section id="chatbot" class="fade">
+        <p class="section-tag">Asistente</p>
+        <h2>Asistente virtual</h2>
+        <p class="section-intro">
+            Resuelve dudas frecuentes con lenguaje simple para ayudarte a entender mejor tu proyecto.
+        </p>
+
+        <div class="assistant-demo">
+            <div class="chat-suggestions">
+                <button type="button" onclick="preguntaRapida('No sé qué material usar')">No sé qué material usar</button>
+                <button type="button" onclick="preguntaRapida('¿Qué necesito para cotizar?')">¿Qué necesito para cotizar?</button>
+                <button type="button" onclick="preguntaRapida('Quiero ver cómo se vería mi producto')">Quiero ver mi producto</button>
+                <button type="button" onclick="preguntaRapida('¿Cuánto tiempo tarda?')">¿Cuánto tiempo tarda?</button>
+            </div>
+
+            <div class="chat-box">
+                <input type="text" id="chat" placeholder="Escribe tu duda...">
+                <button type="button" onclick="responder()" class="btn secondary">Enviar</button>
+            </div>
+
+            <div class="chat-response-box premium-chat">
+                <span class="chat-badge">Asistente Honpe</span>
+                <p id="respuesta" class="result-text">
+                    Hola, soy tu asistente virtual. Puedo ayudarte con materiales, cotización, tiempos, proceso y visualización del prototipo.
+                </p>
+            </div>
+        </div>
+    </section>
+<section class="fade">
         <div class="split-grid">
             <div>
                 <p class="section-tag">Claridad técnica</p>
@@ -225,36 +253,6 @@
             <p id="mensajeForm" class="form-message"></p>
         </form>
     </section>
-
-    <section id="chatbot" class="fade">
-        <p class="section-tag">Asistente</p>
-        <h2>Asistente virtual</h2>
-        <p class="section-intro">
-            Resuelve dudas frecuentes con lenguaje simple para ayudarte a entender mejor tu proyecto.
-        </p>
-
-        <div class="assistant-demo">
-            <div class="chat-suggestions">
-                <button type="button" onclick="preguntaRapida('No sé qué material usar')">No sé qué material usar</button>
-                <button type="button" onclick="preguntaRapida('¿Qué necesito para cotizar?')">¿Qué necesito para cotizar?</button>
-                <button type="button" onclick="preguntaRapida('Quiero ver cómo se vería mi producto')">Quiero ver mi producto</button>
-                <button type="button" onclick="preguntaRapida('¿Cuánto tiempo tarda?')">¿Cuánto tiempo tarda?</button>
-            </div>
-
-            <div class="chat-box">
-                <input type="text" id="chat" placeholder="Escribe tu duda...">
-                <button type="button" onclick="responder()" class="btn secondary">Enviar</button>
-            </div>
-
-            <div class="chat-response-box premium-chat">
-                <span class="chat-badge">Asistente Honpe</span>
-                <p id="respuesta" class="result-text">
-                    Hola, soy tu asistente virtual. Puedo ayudarte con materiales, cotización, tiempos, proceso y visualización del prototipo.
-                </p>
-            </div>
-        </div>
-    </section>
-
     <section id="modelo3d" class="fade">
         <p class="section-tag">Visualización</p>
         <h2>Visualización del modelo 3D</h2>
