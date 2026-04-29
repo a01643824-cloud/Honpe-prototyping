@@ -4,9 +4,14 @@
 }
 
 :root {
-    --bg: #f4f7fb;
-    --card: #ffffff;
-    --text: #1f2937;
+    --bg: #050505;
+    --card: #0f172a;
+    --text: #ffffff;
+    --muted: #94a3b8;
+    --primary: #e52b2f;
+    --accent-blue: #008cff;
+    --accent-green: #55c900;
+}
     --muted: #5b6678;
     --dark: #0f172a;
     --primary: #00c896;
