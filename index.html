@@ -3,400 +3,418 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Honpe Prototyping</title>
+    <title>Honpe ProtoSphere | Prototyping</title>
     <meta name="description" content="Transforma tu idea en un prototipo real con guía paso a paso, visualización 3D y seguimiento continuo.">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <header class="navbar">
-        <div class="nav-container">
-            <a href="#inicio" class="brand">
-                <img src="assets/logo-honpe.webp" alt="Logo Honpe Prototyping" class="logo">
-                <span>Honpe Prototyping</span>
-            </a>
+<header class="navbar">
+    <div class="nav-container">
+        <a href="#inicio" class="brand">
+            <img src="assets/logo-honpe.webp" alt="Logo Honpe Prototyping" class="logo">
+            <span>
+                <strong>HONPE</strong>
+                <small>ProtoSphere</small>
+            </span>
+        </a>
 
-            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
-                ☰
-            </button>
+        <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
+            ☰
+        </button>
 
-            <nav class="nav-menu" id="navMenu">
-                <ul class="nav-links">
-                    <li><a href="#como-funciona">Cómo funciona</a></li>
-                    <li><a href="#cotizacion">Cotización</a></li>
-                    <li><a href="#chatbot">Asistente</a></li>
-                    <li><a href="#modelo3d">Modelo 3D</a></li>
-                    <li><a href="#seguimiento">Seguimiento</a></li>
-                    <li><a href="#proyectos">Proyectos</a></li>
-                    <li><a href="#contacto">Contacto</a></li>
-                </ul>
-            </nav>
+        <nav class="nav-menu" id="navMenu">
+            <ul class="nav-links">
+                <li><a href="#como-funciona">Cómo funciona</a></li>
+                <li><a href="#cotizacion">Cotización</a></li>
+                <li><a href="#chatbot">Asistente</a></li>
+                <li><a href="#modelo3d">Modelo 3D</a></li>
+                <li><a href="#seguimiento">Seguimiento</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<section class="hero" id="inicio">
+    <div class="hero-bg-shape shape-1"></div>
+    <div class="hero-bg-shape shape-2"></div>
+    <div class="hero-bg-shape shape-3"></div>
+
+    <div class="hero-content">
+        <div class="hero-text-block fade">
+            <p class="badge">Diseño 3D • Prototipado • Manufactura</p>
+            <h1>HONPE <span>ProtoSphere</span></h1>
+            <h2>Soluciones de prototipado que dan forma a tus ideas</h2>
+            <p class="hero-text">
+                En Honpe Prototyping convertimos ideas en prototipos claros, visuales y funcionales.
+                Te guiamos desde la idea inicial hasta la visualización 3D, cotización y seguimiento del proyecto.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#cotizacion" class="btn primary">Cotizar mi prototipo</a>
+                <a href="#como-funciona" class="btn secondary">Ver proceso</a>
+            </div>
         </div>
-    </header>
 
-    <section class="hero" id="inicio">
-        <div class="hero-bg-shape shape-1"></div>
-        <div class="hero-bg-shape shape-2"></div>
+        <div class="hero-panel fade">
+            <div class="prototype-visual">
+                <div class="tech-card tech-red"></div>
+                <div class="tech-card tech-blue"></div>
+                <div class="tech-card tech-green"></div>
 
-        <div class="hero-content">
-            <div class="hero-text-block fade">
-                <p class="badge">Guía simple • Visualización 3D • Seguimiento claro</p>
-                <h1>Convierte tu idea en un prototipo funcional</h1>
-                <h2>Una experiencia clara para clientes que no hablan en términos técnicos</h2>
-                <p class="hero-text">
-                    En Honpe Prototyping facilitamos el proceso desde la idea inicial hasta el seguimiento
-                    del desarrollo, con ayuda visual, orientación sencilla y contacto directo.
-                </p>
-
-                <div class="hero-buttons">
-                    <a href="#cotizacion" class="btn primary">Cotizar mi prototipo</a>
-                    <a href="#como-funciona" class="btn secondary">Ver cómo funciona</a>
+                <div class="printer-box">
+                    <div class="printer-frame"></div>
+                    <div class="printer-head"></div>
+                    <div class="printed-sphere"></div>
+                    <div class="printer-base"></div>
                 </div>
             </div>
 
-            <div class="hero-panel fade">
-                <div class="hero-mini-card">
-                    <span class="mini-label">Estado actual</span>
-                    <h3>Solicitud recibida</h3>
-                    <p>Tu idea ya puede convertirse en una propuesta clara y visual para comenzar el desarrollo.</p>
+            <div class="hero-mini-card">
+                <span class="mini-label">Estado actual</span>
+                <h3>Idea lista para analizar</h3>
+                <p>Convierte una descripción sencilla en una propuesta visual y técnica más clara.</p>
+            </div>
+
+            <div class="hero-mini-card accent-card">
+                <span class="mini-label">Siguiente paso</span>
+                <h3>Validación inicial</h3>
+                <p>Definimos uso, tamaño, material, cantidad y alcance del prototipo.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<main>
+
+    <section class="metrics fade">
+        <div class="metric-card">
+            <strong>Proceso claro</strong>
+            <span>Menos confusión al iniciar</span>
+        </div>
+        <div class="metric-card">
+            <strong>Vista conceptual</strong>
+            <span>Mayor confianza antes de fabricar</span>
+        </div>
+        <div class="metric-card">
+            <strong>Seguimiento continuo</strong>
+            <span>Más visibilidad del proyecto</span>
+        </div>
+        <div class="metric-card">
+            <strong>Contacto inmediato</strong>
+            <span>WhatsApp y Facebook integrados</span>
+        </div>
+    </section>
+
+    <section id="como-funciona" class="fade">
+        <p class="section-tag">Proceso</p>
+        <h2>Cómo funciona</h2>
+        <p class="section-intro">
+            Diseñamos una experiencia para que cualquier persona pueda pasar de una idea general
+            a un proyecto claro, entendible y listo para desarrollar.
+        </p>
+
+        <div class="steps-grid">
+            <article class="step-card">
+                <span class="step-number">1</span>
+                <h3>Cuéntanos tu idea</h3>
+                <p>Describe el producto, pieza o prototipo que quieres desarrollar con un formulario simple y claro.</p>
+            </article>
+
+            <article class="step-card">
+                <span class="step-number">2</span>
+                <h3>Recibe guía inmediata</h3>
+                <p>Un asistente virtual te ayuda a resolver dudas sobre materiales, proceso, uso y nivel de desarrollo.</p>
+            </article>
+
+            <article class="step-card">
+                <span class="step-number">3</span>
+                <h3>Visualiza tu prototipo</h3>
+                <p>Puedes revisar una vista previa conceptual del producto para entender mejor el resultado esperado.</p>
+            </article>
+
+            <article class="step-card">
+                <span class="step-number">4</span>
+                <h3>Da seguimiento a tu proyecto</h3>
+                <p>Consulta etapas, avances, fechas estimadas y actualizaciones de forma clara y ordenada.</p>
+            </article>
+        </div>
+    </section>
+
+    <section class="fade">
+        <div class="split-grid">
+            <div>
+                <p class="section-tag">Claridad técnica</p>
+                <h2>Hacemos entendible lo complejo</h2>
+                <p>
+                    Muchas personas tienen una idea, pero no saben cómo explicarla técnicamente.
+                    Ahí es donde normalmente aparece la frustración, la duda y el abandono del proceso.
+                </p>
+                <p>
+                    Esta experiencia está diseñada para convertir una idea general en información clara
+                    que permita cotizar, orientar y desarrollar un prototipo con mayor seguridad.
+                </p>
+            </div>
+
+            <div class="info-box">
+                <h3>Lo importante no es saber términos técnicos</h3>
+                <p>Lo importante es poder responder con claridad:</p>
+                <ul>
+                    <li>¿Qué quieres hacer?</li>
+                    <li>¿Para qué lo quieres?</li>
+                    <li>¿Qué tamaño tiene?</li>
+                    <li>¿Qué material imaginas?</li>
+                    <li>¿Cuántas piezas necesitas?</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="cotizacion" class="fade">
+        <p class="section-tag">Cotización</p>
+        <h2>Cuéntanos tu idea</h2>
+        <p class="section-intro">
+            Completa este formulario para iniciar tu solicitud. No necesitas información perfecta,
+            solo una descripción general que nos ayude a entender tu proyecto.
+        </p>
+
+        <form id="cotizacionForm" class="quote-form">
+            <div class="form-grid">
+                <input type="text" id="nombre" placeholder="Nombre completo" required>
+                <input type="email" id="correo" placeholder="Correo electrónico" required>
+                <input type="text" id="idea" placeholder="¿Qué quieres crear?" required>
+                <input type="text" id="uso" placeholder="¿Para qué lo necesitas?" required>
+
+                <select id="tamano">
+                    <option value="">Selecciona el tamaño aproximado</option>
+                    <option>Pequeño</option>
+                    <option>Mediano</option>
+                    <option>Grande</option>
+                </select>
+
+                <div class="field-group">
+                    <select id="material">
+                        <option value="">Selecciona un tipo de material</option>
+                        <option>Plástico</option>
+                        <option>Metal</option>
+                        <option>Silicona</option>
+                        <option>Madera</option>
+                        <option>No estoy seguro</option>
+                    </select>
+                    <p class="field-help">
+                        No tienes que ser experto. Nosotros validaremos si es el correcto o te sugeriremos otro ideal.
+                    </p>
                 </div>
 
-                <div class="hero-mini-card">
-                    <span class="mini-label">Siguiente paso</span>
-                    <h3>Validación inicial</h3>
-                    <p>Definir uso, tamaño, material y cantidad para avanzar con menos fricción.</p>
-                </div>
+                <select id="cantidad">
+                    <option value="">Cantidad estimada</option>
+                    <option>1 pieza</option>
+                    <option>10 piezas</option>
+                    <option>100 piezas</option>
+                    <option>1000 piezas o más</option>
+                </select>
 
-                <div class="hero-mini-card">
-                    <span class="mini-label">Experiencia</span>
-                    <h3>Proceso guiado</h3>
-                    <p>Formulario simple, orientación virtual, simulación conceptual y seguimiento de proyecto.</p>
+                <input type="text" id="referencia" placeholder="Referencia visual o producto similar">
+            </div>
+
+            <textarea id="detalles" placeholder="Cuéntanos algún otro detalle importante para que tu idea sea más clara"></textarea>
+
+            <button type="submit" class="btn-submit">Enviar solicitud</button>
+            <p id="mensajeForm" class="form-message"></p>
+        </form>
+    </section>
+
+    <section id="chatbot" class="fade">
+        <p class="section-tag">Asistente</p>
+        <h2>Asistente virtual</h2>
+        <p class="section-intro">
+            Resuelve dudas frecuentes con lenguaje simple para ayudarte a entender mejor tu proyecto.
+        </p>
+
+        <div class="assistant-demo">
+            <div class="chat-suggestions">
+                <button type="button" onclick="preguntaRapida('No sé qué material usar')">No sé qué material usar</button>
+                <button type="button" onclick="preguntaRapida('¿Qué necesito para cotizar?')">¿Qué necesito para cotizar?</button>
+                <button type="button" onclick="preguntaRapida('Quiero ver cómo se vería mi producto')">Quiero ver mi producto</button>
+                <button type="button" onclick="preguntaRapida('¿Cuánto tiempo tarda?')">¿Cuánto tiempo tarda?</button>
+            </div>
+
+            <div class="chat-box">
+                <input type="text" id="chat" placeholder="Escribe tu duda...">
+                <button type="button" onclick="responder()" class="btn secondary">Enviar</button>
+            </div>
+
+            <div class="chat-response-box premium-chat">
+                <span class="chat-badge">Asistente Honpe</span>
+                <p id="respuesta" class="result-text">
+                    Hola, soy tu asistente virtual. Puedo ayudarte con materiales, cotización, tiempos, proceso y visualización del prototipo.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="modelo3d" class="fade">
+        <p class="section-tag">Visualización</p>
+        <h2>Visualización del modelo 3D</h2>
+        <p class="section-intro">
+            Antes de fabricar, el cliente puede revisar una simulación conceptual que le ayude a entender
+            forma, escala y posibles ajustes del prototipo.
+        </p>
+
+        <div class="model-preview">
+            <div class="model-card premium-surface">
+                <div class="model-view model-visual">
+                    <div class="cube cube-1"></div>
+                    <div class="cube cube-2"></div>
+                    <div class="cube cube-3"></div>
+                    <div class="orbit orbit-1"></div>
+                    <div class="orbit orbit-2"></div>
+                    <span class="model-overlay-text">Simulación 3D conceptual</span>
+                </div>
+            </div>
+
+            <div class="model-details premium-surface">
+                <h3>Vista previa del proyecto</h3>
+                <ul>
+                    <li><strong>Tipo:</strong> Prototipo funcional</li>
+                    <li><strong>Material sugerido:</strong> Plástico técnico</li>
+                    <li><strong>Escala:</strong> Mediana</li>
+                    <li><strong>Acabado:</strong> Validación inicial</li>
+                    <li><strong>Siguiente paso:</strong> Ajustes técnicos</li>
+                </ul>
+
+                <button class="btn primary" type="button" onclick="mostrarModelo()">Cargar ejemplo</button>
+                <p id="modeloMensaje" class="result-text"></p>
+            </div>
+        </div>
+    </section>
+
+    <section id="seguimiento" class="fade">
+        <p class="section-tag">Seguimiento</p>
+        <h2>Seguimiento de tu proyecto</h2>
+        <p class="section-intro">
+            Consulta avances, responsables y próximas etapas en una vista más clara y profesional.
+        </p>
+
+        <div class="tracking-dashboard">
+            <div class="tracking-summary premium-surface">
+                <h3>Proyecto activo</h3>
+                <p class="tracking-big">Prototipo funcional</p>
+                <span class="tracking-status">En progreso</span>
+            </div>
+
+            <div class="tracking-summary premium-surface">
+                <h3>Última actualización</h3>
+                <p>Se validó la información inicial del cliente y se prepara la simulación conceptual.</p>
+            </div>
+
+            <div class="tracking-summary premium-surface">
+                <h3>Fecha estimada</h3>
+                <p>29 de abril de 2026</p>
+            </div>
+        </div>
+
+        <div class="tracking-card premium-surface">
+            <div class="progress-bar">
+                <div class="progress-fill"></div>
+            </div>
+
+            <div class="tracking-steps">
+                <div class="tracking-step active">Solicitud</div>
+                <div class="tracking-step active">Revisión</div>
+                <div class="tracking-step active">Diseño</div>
+                <div class="tracking-step">Modelo 3D</div>
+                <div class="tracking-step">Ajustes</div>
+                <div class="tracking-step">Producción</div>
+            </div>
+
+            <button class="btn primary" type="button" onclick="estado()">Ver actualización</button>
+            <p id="estado" class="result-text"></p>
+        </div>
+    </section>
+
+    <section id="proyectos" class="fade">
+        <p class="section-tag">Galería</p>
+        <h2>Ejemplos de proyectos y procesos</h2>
+        <p class="section-intro">
+            Conoce algunos ejemplos visuales de piezas, componentes y procesos relacionados con Honpe Prototyping.
+        </p>
+
+        <div class="galeria">
+            <div class="gallery-item premium-surface">
+                <img src="assets/ejemplo1.jpg" alt="Pieza mecanizada azul">
+                <div class="gallery-caption">
+                    <h3>Pieza mecanizada</h3>
+                    <p>Ejemplo de componente desarrollado con enfoque en detalle y precisión.</p>
+                </div>
+            </div>
+
+            <div class="gallery-item premium-surface">
+                <img src="assets/ejemplo2.jpg" alt="Componente industrial negro">
+                <div class="gallery-caption">
+                    <h3>Componente estructural</h3>
+                    <p>Visualización de pieza aplicada a soluciones técnicas e industriales.</p>
+                </div>
+            </div>
+
+            <div class="gallery-item premium-surface">
+                <img src="assets/ejemplo3.jpg" alt="Proceso de maquinado">
+                <div class="gallery-caption">
+                    <h3>Proceso de manufactura</h3>
+                    <p>Ejemplo del tipo de desarrollo y producción asociado al proyecto del cliente.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <main>
+    <section id="contacto" class="fade contact-section">
+        <p class="section-tag">Contacto</p>
+        <h2>Contacto rápido</h2>
+        <p class="section-intro">
+            Si ya tienes una idea o quieres resolver dudas, comunícate directamente con nosotros.
+        </p>
 
-        <section class="metrics fade">
-            <div class="metric-card">
-                <strong>Proceso más claro</strong>
-                <span>Menos confusión al iniciar</span>
-            </div>
-            <div class="metric-card">
-                <strong>Vista conceptual</strong>
-                <span>Mayor confianza antes de fabricar</span>
-            </div>
-            <div class="metric-card">
-                <strong>Seguimiento continuo</strong>
-                <span>Más visibilidad del proyecto</span>
-            </div>
-            <div class="metric-card">
-                <strong>Contacto inmediato</strong>
-                <span>WhatsApp y Facebook integrados</span>
-            </div>
-        </section>
+        <div class="contact-links">
+            <a href="https://wa.me/523330439148?text=Hola%2C%20quiero%20cotizar%20un%20prototipo%20con%20Honpe%20Prototyping" target="_blank" class="contact-btn whatsapp-btn">
+                WhatsApp
+            </a>
 
-        <section id="como-funciona" class="fade">
-            <h2>Cómo funciona</h2>
-            <p class="section-intro">
-                Diseñamos una experiencia para que cualquier persona pueda pasar de una idea general
-                a un proyecto claro, entendible y listo para desarrollar.
-            </p>
-
-            <div class="steps-grid">
-                <article class="step-card">
-                    <span class="step-number">1</span>
-                    <h3>Cuéntanos tu idea</h3>
-                    <p>Describe el producto, pieza o prototipo que quieres desarrollar con un formulario simple y claro.</p>
-                </article>
-
-                <article class="step-card">
-                    <span class="step-number">2</span>
-                    <h3>Recibe guía inmediata</h3>
-                    <p>Un asistente virtual te ayuda a resolver dudas sobre materiales, proceso, uso y nivel de desarrollo.</p>
-                </article>
-
-                <article class="step-card">
-                    <span class="step-number">3</span>
-                    <h3>Visualiza tu prototipo</h3>
-                    <p>Puedes revisar una vista previa conceptual del producto para entender mejor el resultado esperado.</p>
-                </article>
-
-                <article class="step-card">
-                    <span class="step-number">4</span>
-                    <h3>Da seguimiento a tu proyecto</h3>
-                    <p>Consulta etapas, avances, fechas estimadas y actualizaciones de forma clara y ordenada.</p>
-                </article>
-            </div>
-        </section>
-
-        <section class="fade">
-            <div class="split-grid">
-                <div>
-                    <h2>Hacemos entendible lo complejo</h2>
-                    <p>
-                        Muchas personas tienen una idea, pero no saben cómo explicarla técnicamente.
-                        Ahí es donde normalmente aparece la frustración, la duda y el abandono del proceso.
-                    </p>
-                    <p>
-                        Esta experiencia está diseñada para convertir una idea general en información clara
-                        que permita cotizar, orientar y desarrollar un prototipo con mayor seguridad.
-                    </p>
-                </div>
-
-                <div class="info-box">
-                    <h3>Lo importante no es saber términos técnicos</h3>
-                    <p>Lo importante es poder responder con claridad:</p>
-                    <ul>
-                        <li>¿Qué quieres hacer?</li>
-                        <li>¿Para qué lo quieres?</li>
-                        <li>¿Qué tamaño tiene?</li>
-                        <li>¿Qué material imaginas?</li>
-                        <li>¿Cuántas piezas necesitas?</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <section id="cotizacion" class="fade">
-            <h2>Cuéntanos tu idea</h2>
-            <p class="section-intro">
-                Completa este formulario para iniciar tu solicitud. No necesitas información perfecta,
-                solo una descripción general que nos ayude a entender tu proyecto.
-            </p>
-
-            <form id="cotizacionForm" class="quote-form">
-                <div class="form-grid">
-                    <input type="text" id="nombre" placeholder="Nombre completo" required>
-                    <input type="email" id="correo" placeholder="Correo electrónico" required>
-                    <input type="text" id="idea" placeholder="¿Qué quieres crear?" required>
-                    <input type="text" id="uso" placeholder="¿Para qué lo necesitas?" required>
-
-                    <select id="tamano">
-                        <option value="">Selecciona el tamaño aproximado</option>
-                        <option>Pequeño</option>
-                        <option>Mediano</option>
-                        <option>Grande</option>
-                    </select>
-
-                    <div class="field-group">
-                        <select id="material">
-                            <option value="">Selecciona un tipo de material</option>
-                            <option>Plástico</option>
-                            <option>Metal</option>
-                            <option>Silicona</option>
-                            <option>Madera</option>
-                            <option>No estoy seguro</option>
-                        </select>
-                        <p class="field-help">
-                            No tienes que ser experto, solo dinos qué material te gustaría usar.
-                            Nosotros validaremos si es el correcto o te sugeriremos otro ideal para tu proyecto.
-                        </p>
-                    </div>
-
-                    <select id="cantidad">
-                        <option value="">Cantidad estimada</option>
-                        <option>1 pieza</option>
-                        <option>10 piezas</option>
-                        <option>100 piezas</option>
-                        <option>1000 piezas o más</option>
-                    </select>
-
-                    <input type="text" id="referencia" placeholder="Referencia visual o producto similar">
-                </div>
-
-                <textarea id="detalles" placeholder="Cuéntanos algún otro detalle importante para que tu idea sea más clara"></textarea>
-
-                <button type="submit" class="btn-submit">Enviar solicitud</button>
-                <p id="mensajeForm" class="form-message"></p>
-            </form>
-        </section>
-
-        <section id="chatbot" class="fade">
-            <h2>Asistente virtual</h2>
-            <p class="section-intro">
-                Resuelve dudas frecuentes con lenguaje simple para ayudarte a entender mejor tu proyecto.
-            </p>
-
-            <div class="assistant-demo">
-                <div class="chat-suggestions">
-                    <button type="button" onclick="preguntaRapida('No sé qué material usar')">No sé qué material usar</button>
-                    <button type="button" onclick="preguntaRapida('¿Qué necesito para cotizar?')">¿Qué necesito para cotizar?</button>
-                    <button type="button" onclick="preguntaRapida('Quiero ver cómo se vería mi producto')">Quiero ver cómo se vería mi producto</button>
-                    <button type="button" onclick="preguntaRapida('¿Cuánto tiempo tarda?')">¿Cuánto tiempo tarda?</button>
-                </div>
-
-                <div class="chat-box">
-                    <input type="text" id="chat" placeholder="Escribe tu duda...">
-                    <button type="button" onclick="responder()" class="btn secondary">Enviar</button>
-                </div>
-
-                <div class="chat-response-box premium-chat">
-                    <span class="chat-badge">Asistente Honpe</span>
-                    <p id="respuesta" class="result-text">
-                        Hola, soy tu asistente virtual. Puedo ayudarte con materiales, cotización, tiempos, proceso y visualización del prototipo.
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <section id="modelo3d" class="fade">
-            <h2>Visualización del modelo 3D</h2>
-            <p class="section-intro">
-                Antes de fabricar, el cliente puede revisar una simulación conceptual que le ayude a entender
-                forma, escala y posibles ajustes del prototipo.
-            </p>
-
-            <div class="model-preview">
-                <div class="model-card premium-surface">
-                    <div class="model-view model-visual">
-                        <div class="cube cube-1"></div>
-                        <div class="cube cube-2"></div>
-                        <div class="cube cube-3"></div>
-                        <div class="orbit orbit-1"></div>
-                        <div class="orbit orbit-2"></div>
-                        <span class="model-overlay-text">Simulación 3D conceptual</span>
-                    </div>
-                </div>
-
-                <div class="model-details premium-surface">
-                    <h3>Vista previa del proyecto</h3>
-                    <ul>
-                        <li><strong>Tipo:</strong> Prototipo funcional</li>
-                        <li><strong>Material sugerido:</strong> Plástico técnico</li>
-                        <li><strong>Escala:</strong> Mediana</li>
-                        <li><strong>Acabado:</strong> Validación inicial</li>
-                        <li><strong>Siguiente paso:</strong> Ajustes técnicos</li>
-                    </ul>
-
-                    <button class="btn primary" type="button" onclick="mostrarModelo()">Cargar ejemplo</button>
-                    <p id="modeloMensaje" class="result-text"></p>
-                </div>
-            </div>
-        </section>
-
-        <section id="seguimiento" class="fade">
-            <h2>Seguimiento de tu proyecto</h2>
-            <p class="section-intro">
-                Consulta avances, responsables y próximas etapas en una vista más clara y profesional.
-            </p>
-
-            <div class="tracking-dashboard">
-                <div class="tracking-summary premium-surface">
-                    <h3>Proyecto activo</h3>
-                    <p class="tracking-big">Prototipo funcional</p>
-                    <span class="tracking-status">En progreso</span>
-                </div>
-
-                <div class="tracking-summary premium-surface">
-                    <h3>Última actualización</h3>
-                    <p>Se validó la información inicial del cliente y se prepara la simulación conceptual.</p>
-                </div>
-
-                <div class="tracking-summary premium-surface">
-                    <h3>Fecha estimada</h3>
-                    <p>29 de abril de 2026</p>
-                </div>
-            </div>
-
-            <div class="tracking-card premium-surface">
-                <div class="progress-bar">
-                    <div class="progress-fill"></div>
-                </div>
-
-                <div class="tracking-steps">
-                    <div class="tracking-step active">Solicitud</div>
-                    <div class="tracking-step active">Revisión</div>
-                    <div class="tracking-step active">Diseño</div>
-                    <div class="tracking-step">Modelo 3D</div>
-                    <div class="tracking-step">Ajustes</div>
-                    <div class="tracking-step">Producción</div>
-                </div>
-
-                <button class="btn primary" type="button" onclick="estado()">Ver actualización</button>
-                <p id="estado" class="result-text"></p>
-            </div>
-        </section>
-
-        <section id="proyectos" class="fade">
-            <h2>Ejemplos de proyectos y procesos</h2>
-            <p class="section-intro">
-                Conoce algunos ejemplos visuales de piezas, componentes y procesos relacionados con Honpe Prototyping.
-            </p>
-
-            <div class="galeria">
-                <div class="gallery-item premium-surface">
-                    <img src="assets/ejemplo1.jpg" alt="Pieza mecanizada azul">
-                    <div class="gallery-caption">
-                        <h3>Pieza mecanizada</h3>
-                        <p>Ejemplo de componente desarrollado con enfoque en detalle y precisión.</p>
-                    </div>
-                </div>
-
-                <div class="gallery-item premium-surface">
-                    <img src="assets/ejemplo2.jpg" alt="Componente industrial negro">
-                    <div class="gallery-caption">
-                        <h3>Componente estructural</h3>
-                        <p>Visualización de pieza aplicada a soluciones técnicas e industriales.</p>
-                    </div>
-                </div>
-
-                <div class="gallery-item premium-surface">
-                    <img src="assets/ejemplo3.jpg" alt="Proceso de maquinado">
-                    <div class="gallery-caption">
-                        <h3>Proceso de manufactura</h3>
-                        <p>Ejemplo del tipo de desarrollo y producción asociado al proyecto del cliente.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="contacto" class="fade contact-section">
-            <h2>Contacto rápido</h2>
-            <p class="section-intro">
-                Si ya tienes una idea o quieres resolver dudas, comunícate directamente con nosotros.
-            </p>
-
-            <div class="contact-links">
-                <a href="https://wa.me/523330439148?text=Hola%2C%20quiero%20cotizar%20un%20prototipo%20con%20Honpe%20Prototyping" target="_blank" class="contact-btn whatsapp-btn">
-                    WhatsApp
-                </a>
-
-                <a href="https://www.facebook.com/share/1D1BjbkmcW/" target="_blank" class="contact-btn facebook-btn">
-                    Facebook
-                </a>
-            </div>
-
-            <div class="contact-form-box">
-                <h3>¿Prefieres que un técnico te contacte?</h3>
-                <p class="contact-form-text">
-                    Déjanos tu correo y tus dudas. Un técnico se pondrá en contacto contigo.
-                </p>
-
-                <form id="contactoTecnicoForm" class="contact-form-sim">
-                    <input type="email" id="correoTecnico" placeholder="Tu correo electrónico" required>
-                    <textarea id="dudaTecnica" placeholder="Escribe aquí tu duda o lo que necesitas" required></textarea>
-                    <button type="submit" class="btn-submit">Enviar duda</button>
-                    <p id="mensajeContactoTecnico" class="form-message"></p>
-                </form>
-            </div>
-        </section>
-
-    </main>
-
-    <footer class="footer">
-        <div class="footer-content">
-            <img src="assets/logo-honpe.webp" alt="Logo Honpe Prototyping" class="footer-logo">
-            <p>Honpe Prototyping</p>
-            <span>Soluciones para convertir ideas en prototipos reales</span>
+            <a href="https://www.facebook.com/share/1D1BjbkmcW/" target="_blank" class="contact-btn facebook-btn">
+                Facebook
+            </a>
         </div>
-    </footer>
 
-    <a href="https://wa.me/523330439148?text=Hola%2C%20quiero%20cotizar%20un%20prototipo%20con%20Honpe%20Prototyping" class="whatsapp" target="_blank">
-        💬
-    </a>
+        <div class="contact-form-box">
+            <h3>¿Prefieres que un técnico te contacte?</h3>
+            <p class="contact-form-text">
+                Déjanos tu correo y tus dudas. Un técnico se pondrá en contacto contigo.
+            </p>
 
-    <script src="script.js"></script>
+            <form id="contactoTecnicoForm" class="contact-form-sim">
+                <input type="email" id="correoTecnico" placeholder="Tu correo electrónico" required>
+                <textarea id="dudaTecnica" placeholder="Escribe aquí tu duda o lo que necesitas" required></textarea>
+                <button type="submit" class="btn-submit">Enviar duda</button>
+                <p id="mensajeContactoTecnico" class="form-message"></p>
+            </form>
+        </div>
+    </section>
+
+</main>
+
+<footer class="footer">
+    <div class="footer-content">
+        <img src="assets/logo-honpe.webp" alt="Logo Honpe Prototyping" class="footer-logo">
+        <p>Honpe ProtoSphere</p>
+        <span>Soluciones para convertir ideas en prototipos reales</span>
+    </div>
+</footer>
+
+<a href="https://wa.me/523330439148?text=Hola%2C%20quiero%20cotizar%20un%20prototipo%20con%20Honpe%20Prototyping" class="whatsapp" target="_blank">
+    💬
+</a>
+
+<script src="script.js"></script>
 </body>
 </html>
